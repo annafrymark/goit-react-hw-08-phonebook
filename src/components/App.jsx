@@ -6,27 +6,44 @@ import css from './app.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectError, selectIsLoading } from 'redux/selectors';
 import { fetchContacts } from 'redux/operations';
+import { Route, Routes } from "react-router-dom"
+import { HomePage } from "../pages/HomePage";
+import { LoginPage } from '../pages/LoginPage';
+import { RegisterPage } from '../pages/RegisterPage';
+import { Layout } from './Layout/Layout';
+
 
 const App = () => {
-  const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
-
-  useEffect(() => {
-    dispatch(fetchContacts())
-  }, [dispatch])
-
   return (
-    <div className={css.container}>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      {isLoading && !error && <h4>Loading, please wait...</h4>}
-      {error}
-      <h2>Contacts</h2>
-      <Filter />
-      <ContactList />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="login" element={<LoginPage />} />
+        <Route path="register" element={<RegisterPage />} />
+      </Route>
+    </Routes>
   );
+
+
+//   const dispatch = useDispatch();
+//   const isLoading = useSelector(selectIsLoading);
+//   const error = useSelector(selectError);
+
+//   useEffect(() => {
+//     dispatch(fetchContacts())
+//   }, [dispatch])
+
+//   return (
+//     <div className={css.container}>
+//       <h1>Phonebook</h1>
+//       <ContactForm />
+//       {isLoading && !error && <h4>Loading, please wait...</h4>}
+//       {error}
+//       <h2>Contacts</h2>
+//       <Filter />
+//       <ContactList />
+//     </div>
+//   );
 };
 
 export default App;
