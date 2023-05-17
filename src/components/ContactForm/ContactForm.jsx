@@ -5,7 +5,7 @@ import css from './contactForm.module.css';
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 
-const ContactForm = () => {
+export const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
@@ -68,4 +68,4 @@ ContactForm.propTypes = {
   addNewContact: PropTypes.func,
 };
 
-export default ContactForm;
+// export default ContactForm;

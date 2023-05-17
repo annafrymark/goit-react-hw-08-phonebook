@@ -7,7 +7,6 @@ export const AppBar = () => {
         <h1 className={css.title}>Phonebook</h1>
         <ContactForm />
       </section>
-      <h1></h1>
       <section className={css.section}>
         <h2>Contacts</h2>
         <Filter />

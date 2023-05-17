@@ -1,7 +1,7 @@
-import persistReducer from 'redux-persist/es/persistReducer';
+// import persistReducer from 'redux-persist/es/persistReducer';
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import {
-  persistStore,
+  persistStore, persistReducer,
   FLUSH,
   PAUSE,
   PERSIST,

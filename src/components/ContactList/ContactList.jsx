@@ -4,7 +4,7 @@ import ContactListItem from '../ContactListItem/ContactListItem';
 import css from './contactList.module.css';
 import PropTypes from 'prop-types';
 
-const ContactList = () => {
+export const ContactList = () => {
   const contacts = useSelector(selectContacts);
   const filter = useSelector(selectFilter);
   const isLoading = useSelector(selectIsLoading);
@@ -31,4 +31,4 @@ ContactList.propTypes = {
 
 };
 
-export default ContactList;
+// export default ContactList;
