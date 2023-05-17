@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 import css from './filter.module.css';
 import PropTypes from 'prop-types';
 
-const Filter = () => {
+export const Filter = () => {
   const dispatch = useDispatch();
   const filterId = nanoid();
 
@@ -32,4 +32,4 @@ Filter.propTypes = {
   onChange: PropTypes.func,
 };
 
-export default Filter;
+// export default Filter;
