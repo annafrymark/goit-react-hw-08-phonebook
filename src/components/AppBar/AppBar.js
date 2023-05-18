@@ -11,7 +11,7 @@ export const AppBar = () => {
         <ContactForm />
       </section>
       <section className={css.section}>
-        <h2>Contacts</h2>
+        <h2 className={css.title}>Contacts</h2>
         <Filter />
         <ContactList />
       </section>
