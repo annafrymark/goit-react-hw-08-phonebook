@@ -13,9 +13,8 @@ export const ContactForm = () => {
     event.preventDefault();
     const form = event.target;
     const newContact = {
-      id: nanoid(),
       name: form.name.value,
-      phone: form.phone.value,
+      number: form.number.value,
     };
     console.log(newContact);
     let contactExist = false;
@@ -48,11 +47,11 @@ export const ContactForm = () => {
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
       />
-      <label htmlFor="phone">Number</label>
+      <label htmlFor="number">Number</label>
       <input
         id={numberInputId}
         type="tel"
-        name="phone"
+        name="number"
         pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
