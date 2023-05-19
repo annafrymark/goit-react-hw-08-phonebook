@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { AppContainer } from '../AppContainer/AppContainer';
+import { AppContainer } from '../AppBar/AppBar';
 import css from './Layout.module.css';
 
 export const Layout = ({ children }) => {

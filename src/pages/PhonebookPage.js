@@ -1,9 +1,13 @@
-import { AppBar } from '../components/AppBar/AppBar';
+
+import { ContactForm } from '../components/ContactForm/ContactForm';
+import { Filter } from '../components/Filter/Filter';
 import { ContactList } from '../components/ContactList/ContactList';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoading } from 'redux/selectors';
 import { useEffect } from 'react';
 import { fetchContacts } from 'redux/operations';
+import css from './PhonebookPage.module.css';
+import { Helmet } from 'react-helmet';
 
 export default function PhonebookPage () {
   const dispatch = useDispatch();
@@ -14,10 +18,19 @@ export default function PhonebookPage () {
   }, [dispatch]);
 
   return (
-    <div>
-      <AppBar />
-      <div>{isLoading && 'In progress'}</div>
-      <ContactList />
+    <div className={css.wrapper}>
+      <Helmet>
+        <title>Phonebook</title>
+      </Helmet>
+      <section className={css.section}>
+        <ContactForm />
+      </section>
+      <section className={css.section}>
+        <h2 className={css.title}>Contacts</h2>
+        <Filter />
+        <div>{isLoading && 'In progress'}</div>
+        <ContactList />
+      </section>
     </div>
   );
 };

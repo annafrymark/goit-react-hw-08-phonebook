@@ -2,6 +2,6 @@
 // import { ContactForm } from '../components/ContactForm/ContactForm';
 // import { ContactList } from '../components/ContactList/ContactList';
 
-export default function HomePage () {
-  return <div>This is HomePage!</div>;
-};
+export default function HomePage() {
+  return <div>Phonebook welcome page</div>;
+}
