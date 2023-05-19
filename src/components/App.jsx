@@ -51,6 +51,7 @@ const App = () => {
             <PrivateRoute redirectTo="/login" component={<PhonebookPage />} />
           }
         />
+        {/* <Route path="*" element={<HomePage />} /> */}
       </Route>
     </Routes>
   );
