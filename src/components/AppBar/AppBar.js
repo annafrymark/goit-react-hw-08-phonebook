@@ -4,7 +4,7 @@ import { Navigation } from 'components/Navigation/Navigation';
 import { UserMenu } from '../UserMenu/UserMenu';
 import css from './AppBar.module.css';
 
-export const AppContainer = () => {
+export const AppBar = () => {
   const { isLoggedIn } = useAuth();
 
   return (
