@@ -12,7 +12,7 @@ const ContactListItem = ({ contact }) => {
 
   return (
     <li className={css.contactListItem}>
-      {contact.name} : {contact.phone}
+      {contact.name} : {contact.number}
       <button
         className={css.deleteButton}
         type="button"
